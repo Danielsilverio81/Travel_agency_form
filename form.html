@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agência de viagens</title>
 </head>
 <body>
         <header>
@@ -19,13 +19,108 @@
                     <img src="src/images/aviao.png" alt="Simbolo de um Avião" title="Ícone Avião">
                     <h2>Solicite um Orçamento</h2>
                 </div>
-                <h2>Informe seus dados</h2>
-                <form method="post" action="https://www.devmedia.com.br/codigos/missao/front-end/agencia-de-viagens/">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome"
-                    id="nome" placeholder="Nome completo">
-                    <label for="email">Email</label>
-                </form>
+                <div class="container">
+                    <h2>Informe seus dados</h2>
+                    <form method="post" action="https://www.devmedia.com.br/codigos/missao/front-end/agencia-de-viagens/">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome completo" />
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email para contato /">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="telefone" placeholder="(xx) xxxxx-xxxx" />
+                        <div class="container-group">
+                            <div class="agroup">
+                                <label>Data da ida</label>
+                                <input type="date" name="data_da_ida" />
+                            </div>
+                            <div class="agroup">
+                                <label>Data de volta</label>
+                                <input type="date" name="data_de_volta" />
+                            </div>
+                        </div>
+                        <div class="container-group">
+                            <div class="agroup">
+                                <label for="origem">Origem</label>
+                                <select class="select" name="origem" id="origem">
+                                    <option selected>Partindo de</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="GO">Goias</option>
+                                        <option value="MA">Maranhão</option>
+                                </select>
+                            </div>
+                            <div class="agroup">
+                                <label for="destino">Destino</label>
+                                <select name="destino" id="destino">
+                                    <option selected>Indo para</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="GO">Goias</option>
+                                    <option value="MA">Maranhão</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3>Quarto com cama infantil?</h3>
+                        <div>
+                                <input type="radio" id="cama-sim" name="cama" value="sim">
+                                <label for="cama-sim">Sim</label>
+                                <input type="radio" id="cama-nao" name="cama" value="nao">
+                                <label for="cama-nao">Não</label>
+                        </div>
+                        <h3>Preferências da hospedagem</h3>
+                        <div class="category hosting-category">
+                            <div class="agroup-hosting">
+                                <input type="checkbox" id="checkbox-piscina" name="hosting[]" value="">
+                                <label for="checkbox-piscina">Piscina</label>
+                            </div>
+                            <div class="agroup-hosting">
+                                <input type="checkbox" id="checkbox-wifi" name="hosting[]" value="">
+                                <label for="checkbox-wifi">Wifi</label>
+                            </div>
+                            <div class="agroup-hosting">
+                                <input type="checkbox" id="checkbox-garagem" name="hosting[]" value="">
+                                <label for="checkbox-garagem">Garagem</label>
+                            </div>
+                            <div class="agroup-hosting">
+                                <input type="checkbox" id="checkbox-suite" name="hosting[]" value="">
+                                <label for="checkbox-suite">Suite</label>
+                            </div>
+                        </div>
+                        <button type="submit">Solicitar orçamento</button>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <h2>Ofertas</h2>
+                    <p>Com ate 50% de desconto</p>
+                    <div class="agroup-image_principal">
+                        <figure class="image-principal">
+                            <img src="src/images/rio.jpg" alt="imagen do rio de janeiro" title="Rj">
+                            <figcaption>Rio de Janeiro</figcaption>
+                        </figure>
+                    </div>
+                    <div class="agroup-images">
+                        <figure>
+                            <img src="src/images/manaus.jpg" alt="Imagem menor de Manaus" title="Manaus">
+                            <figcaption>Manaus</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="src/images/saopaulo.jpg" alt="Imagem de São paulo menor" title="São paulo">
+                            <figcaption>São paulo</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="src/images/niteroi.jpg" alt="Imagem de Niterói Rj menor" title="Niterói Rj">
+                            <figcaption>Rio de Janeiro</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="src/images/maranhao.jpg" alt="Imagem de Maranhão menor" title="Maranhão">
+                            <figcaption>Maranhão</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </section>
         </main>
     </body>

@@ -1,0 +1,51 @@
+/*Zerando estilos padrões e estabelecendo valor de font-size*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+html {font-size: 62.5%;}
+/*inicializando estilos*/
+
+body {
+    background-color: #80808029;
+    font-family: 'Raleway',sans-serif;
+    font-size: 1.6rem;
+}
+
+section {width: 100%; height: auto;}
+/*cabeçalho estilos*/
+
+header {
+    width: 100%;
+    height: 55px;
+    background: #fff;
+    font-size: 2.4rem;
+    color: #7B68EE;
+}
+
+.logo {
+    height: 32px;
+    width: 32px;
+}
+/*container que contem estilos principais*/
+
+.special-container {
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+}
+
+.image1,.image2 {
+    padding:5px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+.section-form {
+    width: 100%;
+    background-image: url(../images/bahia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

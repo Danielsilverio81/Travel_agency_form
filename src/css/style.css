@@ -5,6 +5,7 @@ html {font-size: 62.5%;}
 /*inicializando estilos*/
 
 body {
+    width: 100%;
     background-color: #80808029;
     font-family: 'Raleway',sans-serif;
     font-size: 1.6rem;
@@ -27,10 +28,9 @@ header {
 }
 /*container que contem estilos principais*/
 
-.special-container {
-    max-width: 1024px;
+.tamanho-maximo {
     width: 100%;
-    height: 100%;
+    max-width: 1024px;
 }
 
 .image1,.image2 {
@@ -40,12 +40,213 @@ header {
     gap: 10px;
 }
 
+.image2 {
+    background: #7B68EE;
+    width: 100%;
+    height: 35px;
+    justify-content: center;
+}
 
+.image2 img {
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+    transform: rotate(-45deg);
+}
 
+.image2 img:hover {transform: rotate(3deg);}
+/*começo da estilização do formulário*/
 
 .section-form {
     width: 100%;
+    height: 100%;
     background-image: url(../images/bahia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.container {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.area-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 25px 20px 25px;
+    background: #fafafa;
+}
+
+.sub-form {
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+}
+
+label {font-size: 1.6rem;}
+
+.topo-form,.select {
+    height: 32px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 5px;
+}
+
+.container-agrupando-rota {
+    display: flex;
+    gap:10px;
+}
+
+.agrupando {width: 50%;}
+
+.categoria {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.categoria label {margin-left: 8px;}
+
+button {
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 160px;
+    height: 32px;
+    border: none;
+    color: #fafafa;
+    background: #7B68EE;
+}
+
+.container-section2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 32px auto 0 auto;
+}
+
+.sub {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+.sub-descricao {margin-bottom: 15px;}
+em {font-weight: 700; color: black;}
+
+.agrupando-imagens {
+    width: 100%;
+    height: 375px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagen-destaque {
+    position: relative;
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.agrupando-imagens-menores {
+    width: calc(50% - 10px);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.agrupando-imagens-menores figure {
+    position: relative;
+    width: calc(50% - 10px);
+    height: calc(50% - 10px);
+    margin: 0 6px;
+}
+
+.imagen-destaque img, .agrupando-imagens-menores img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-destaque figcaption, .agrupando-imagens-menores figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 1.7rem;
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+.imagens-natureza {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-natureza{
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.container-natureza img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container-natureza figcaption {
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
+    background: #fafafa;
+}
+
+.container-natureza figcaption p {
+    color: gray;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+footer {
+    width: 100%;
+    margin-top: 32px;
+    background-color: #7B68EE;
+}
+
+.footer-estilo {
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.container-footer {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-footer h2 {
+    color: #fafafa;
+    margin-bottom: 15px;
+    font-size: 2.0rem;
+}
+
+.footer-agrupamento {
+    margin: 10px;
+    display: flex;
+    margin: 5px;
+}
+
+.footer-agrupamento img {width: 18px;}
+.footer-agrupamento span {
+    color: #fafafa;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+

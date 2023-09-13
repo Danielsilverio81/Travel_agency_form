@@ -29,7 +29,7 @@ header {
 }
 /*container que contem estilos principais*/
 
-.tamanho-maximo {
+.maximum-size {
     width: 100%;
     max-width: 1024px;
 }
@@ -96,21 +96,21 @@ label {font-size: 1.6rem;}
     padding: 0 5px;
 }
 
-.container-agrupando-rota {
+.container-grouping-route {
     display: flex;
     gap:10px;
 }
 
-.agrupando {width: 50%;}
+.grouping {width: 50%;}
 
-.categoria {
+.category {
     margin: 10px 0;
     display: flex;
     align-items: center;
     gap: 70px;
 }
 
-.categoria label {margin-left: 8px;}
+.category label {margin-left: 8px;}
 
 button {
     margin-top: 5px;
@@ -136,23 +136,23 @@ button {
     margin-bottom: 10px;
 }
 
-.sub-descricao {margin-bottom: 15px;}
+.sub-description {margin-bottom: 15px;}
 em {font-weight: 700; color: black;}
 
-.agrupando-imagens {
+.grouping-images {
     width: 100%;
     height: 375px;
     display: flex;
     justify-content: space-between;
 }
 
-.imagen-destaque {
+.image-emphasis {
     position: relative;
     width: calc(50% - 10px);
     height: 100%;
 }
 
-.agrupando-imagens-menores {
+.grouping-smaller-images {
     width: calc(50% - 10px);
     height: 100%;
     display: flex;
@@ -161,20 +161,20 @@ em {font-weight: 700; color: black;}
     justify-content: space-between;
 }
 
-.agrupando-imagens-menores figure {
+.grouping-smaller-images figure {
     position: relative;
     width: calc(50% - 10px);
     height: calc(50% - 10px);
     margin: 0 6px;
 }
 
-.imagen-destaque img, .agrupando-imagens-menores img {
+.image-emphasis img, .grouping-smaller-images img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.imagen-destaque figcaption, .agrupando-imagens-menores figcaption {
+.image-emphasis figcaption, .grouping-smaller-images figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -186,32 +186,32 @@ em {font-weight: 700; color: black;}
 }
 /*Estilização da area de anúncios*/
 
-.imagens-anuncios {
+.advertising-images {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
 }
 
-.container-imagens-natureza{
+.container-images-nature {
     width: calc(50% - 10px);
     height: 100%;
 }
 
-.container-imagens-natureza img {
+.container-images-nature img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.container-imagens-natureza figcaption {
+.container-images-nature figcaption {
     width: 100%;
     padding: 20px;
     margin-top: 5px;
     background: #fafafa;
 }
 
-.container-imagens-natureza figcaption p {
+.container-images-nature figcaption p {
     color: gray;
     margin-top: 15px;
     font-size: 1.4rem;
@@ -224,7 +224,7 @@ footer {
     background-color: #7B68EE;
 }
 
-.footer-estilo {
+.footer-style {
     display: flex;
     justify-content: space-between;
     margin:auto;
@@ -242,14 +242,14 @@ footer {
     font-size: 2.0rem;
 }
 
-.footer-agrupamento {
+.footer-grouping {
     margin: 10px;
     display: flex;
     margin: 5px;
 }
 
-.footer-agrupamento img {width: 18px;}
-.footer-agrupamento span {
+.footer-grouping img {width: 18px;}
+.footer-grouping span {
     color: #fafafa;
     font-size: 1.4rem;
     margin-left: 10px;
@@ -258,28 +258,28 @@ footer {
 
 /*Inicializando Media queries*/
 @media(max-width:1100px) {
-    .tamanho-maximo {width: 90%;}
+    .maximum-size {width: 90%;}
 }
 
 @media(max-width:768px) {
     button {width: 100%;}
     /*Estilização da area de ofertas*/
-    .agrupando-imagens {flex-direction: column; height: 100%;}
-    .agrupando-imagens-menores {width: 100%;}
-    .agrupando-imagens figure {width: 100%; height: 225px; margin-top: 15px;}
+    .grouping-images {flex-direction: column; height: 100%;}
+    .grouping-smaller-images {width: 100%;}
+    .grouping-images figure {width: 100%; height: 225px; margin-top: 15px;}
     /*Estilização area anúncios*/
-    .imagens-anuncios {flex-direction: column;}
-    .container-imagens-natureza{width: 100%; margin-top: 15px;}
-    .container-imagens-natureza figcaption {margin-top: 0;}
+    .advertising-images {flex-direction: column;}
+    .container-images-nature{width: 100%; margin-top: 15px;}
+    .container-images-nature figcaption {margin-top: 0;}
     /*Estilização footer*/
-    .footer-estilo {flex-direction: column; align-items: center;}
+    .footer-style {flex-direction: column; align-items: center;}
     .container-footer {width: 250px;}
 }
 
 @media(max-width: 540px) {
     /*Estilizando seleção formulario*/
-    .container-agrupando-rota, .categoria {flex-direction: column;}
-    .container-agrupando-rota .agrupando, .categoria div {width: 100%;}
+    .container-grouping-route, .category {flex-direction: column;}
+    .container-grouping-route .agrupando, .categoria div {width: 100%;}
 }
 /*Dispositivos menores*/
 @media(max-width:406px) {

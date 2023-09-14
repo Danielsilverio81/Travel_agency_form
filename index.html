@@ -28,30 +28,36 @@
                 </div>
                 <div class="area-form">
                     <h2 class="sub-form">Informe seus dados</h2>
-                    <form>
-                        <label for="name">Nome:</label>
-                        <input type="text" class="topo-form" id="name" name="name" placeholder="Nome completo"
-                            required />
-                        <label for="email">Email:</label>
-                        <input type="email" class="topo-form" id="email" name="email" placeholder="Email para contato"
-                            required />
-                        <label for="cell-phone">Celular:</label>
-                        <input type="tel" class="topo-form" id="cell-phone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
-                            name="cell-phone" placeholder="(xx) xxxxx-xxxx" required />
+                    <form id="form">
+                        <div>
+                            <label for="name">Nome:</label>
+                            <input type="text" class="topo-form" id="name" name="name" placeholder="Nome completo" />
+                            <span id="name-error"></span>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" class="topo-form" id="email" name="email" placeholder="Email para contato" />
+                            <span id="email-error"></span>
+                        </div>
+                        <div>
+                            <label for="cell-phone">Celular:</label>
+                            <input type="tel" class="topo-form" id="cell-phone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                                name="cell-phone" placeholder="(xx) xxxxx-xxxx (opcional)" />
+                        </div>
                         <div class="container-grouping-route">
                             <div class="grouping">
                                 <label>Data da ida</label>
-                                <input type="date" class="topo-form" name="match" />
+                                <input type="date" class="topo-form" name="match" required/>
                             </div>
-                            <div class="agrupando">
+                            <div class="grouping">
                                 <label>Data de volta</label>
-                                <input type="date" class="topo-form" name="arrival" />
+                                <input type="date" class="topo-form" name="arrival" required />
                             </div>
                         </div>
                         <div class="container-grouping-route">
                             <div class="grouping">
                                 <label for="origin">Origem</label>
-                                <select class="select" name="origin" id="origin">
+                                <select class="select" name="origin" id="origin" required>
                                     <option selected>Partindo de</option>
                                     <option value="AM">Amazonas</option>
                                     <option value="RJ">Rio de Janeiro</option>
@@ -59,10 +65,11 @@
                                     <option value="GO">Goias</option>
                                     <option value="MA">Maranhão</option>
                                 </select>
+                                <span id="origin-error"></span>
                             </div>
                             <div class="grouping">
                                 <label for="destiny">Destino</label>
-                                <select class="select" name="destiny" id="destiny">
+                                <select class="select" name="destiny" id="destiny" required>
                                     <option selected>Indo para</option>
                                     <option value="AM">Amazonas</option>
                                     <option value="RJ">Rio de Janeiro</option>
@@ -70,35 +77,36 @@
                                     <option value="GO">Goias</option>
                                     <option value="MA">Maranhão</option>
                                 </select>
+                                <span id="destiny-error"></span>
                             </div>
                         </div>
                         <label>Quarto com cama infantil?</label>
                         <div class="category">
                             <div>
-                                <input type="radio" id="cama-sim" name="infantil" value="s">
+                                <input type="radio" class="checkmark" name="infantil" value="s">
                                 <label for="cama-sim">Sim</label>
                             </div>
                             <div>
-                                <input type="radio" id="cama-nao" name="infantil" value="n" checked>
+                                <input type="radio" class="checkmark" name="infantil" value="n" checked>
                                 <label for="cama-nao">Não</label>
                             </div>
                         </div>
                         <label>Preferências da hospedagem</label>
                         <div class="category">
-                            <div>
-                                <input type="checkbox" id="checkbox-piscina" name="preferencias[]" value="piscina">
+                            <div class="d-flex mark">
+                                <input type="checkbox" id="checkbox-piscina" class="checkmark" name="preferencias[]" value="piscina">
                                 <label for="checkbox-piscina">Piscina</label>
                             </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-wifi" name="preferencias[]" value="wifi">
+                            <div class="d-flex mark">
+                                <input type="checkbox" id="checkbox-wifi" class="checkmark" name="preferencias[]" value="wifi">
                                 <label for="checkbox-wifi">Wifi</label>
                             </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-garagem" name="preferencias[]" value="garagem">
+                            <div class="d-flex mark">
+                                <input type="checkbox" id="checkbox-garagem" class="checkmark" name="preferencias[]" value="garagem">
                                 <label for="checkbox-garagem">Garagem</label>
                             </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-suite" name="preferencias[]" value="suite">
+                            <div class="d-flex mark">
+                                <input type="checkbox" id="checkbox-suite" class="checkmark" name="preferencias[]" value="suite">
                                 <label for="checkbox-suite">Suite</label>
                             </div>
                         </div>
@@ -194,6 +202,18 @@
             </div>
         </div>
     </footer>
+    <div class="modal-container">
+        <div id="modal">
+            <button id="closeBtn">X</button>
+            <h3 class="subtitle">Tem Certeza que deseja Solicitar orçamento?</h3>
+            <div class="flex-container">
+                <button id="btnConfirm">Sim</button>
+                <button id="btnCancel">Não</button>
+            </div>
+            <span class="response">Cadastrado com Sucesso!!</span>
+        </div>
+    </div>
+    <script src="src/js/index.js" type="module"></script>
 </body>
 
 </html>

@@ -46,12 +46,14 @@
                         </div>
                         <div class="container-grouping-route">
                             <div class="grouping">
-                                <label>Data da ida</label>
-                                <input type="date" class="topo-form" name="match" required/>
+                                <label for="departure-date">Data da ida</label>
+                                <input type="date" id="departure-date" class="topo-form" name="match" required/>
+                                <div><span class="departure-err"></span></div>
                             </div>
                             <div class="grouping">
-                                <label>Data de volta</label>
-                                <input type="date" class="topo-form" name="arrival" required />
+                                <label for="return-date">Data de volta</label>
+                                <input type="date" id="return-date" class="topo-form" name="arrival" required />
+                                <div><span class="returnDay-err"></span></div>
                             </div>
                         </div>
                         <div class="container-grouping-route">

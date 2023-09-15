@@ -1,27 +1,25 @@
-import { confirmModal } from "./ConfirmForm.js";
-import { destinyValue, originValue } from "./checkSelect.js";
-import { validateEmail } from "./emailValidate.js";
-import { form, userInputs } from "./getElements.js";
-import { validateName } from "./nameValidate.js";
+import { confirmModal } from "./formFunctions/ConfirmForm.js";
+import { compareDates } from "./formFunctions/checkDates.js";
+import { destinyValue, originValue } from "./formFunctions/checkSelect.js";
+import { validateEmail } from "./formFunctions/emailValidate.js";
+import { departureDate, form, returnDate, userInputs } from "./formFunctions/getElements.js";
+import { validateName } from "./formFunctions/nameValidate.js";
 
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
 
   try {
-    if (validateName(userInputs.name.value)) {
+    validateName(userInputs.name.value, userInputs.name)
       userInputs.name.classList.add("success");
-    }
-    if (validateEmail(userInputs.email.value)) {
+    validateEmail(userInputs.email.value, userInputs.email)
       userInputs.email.classList.add("success");
-    }
-    originValue(userInputs.origin.value);
-    destinyValue(userInputs.destiny.value);
     if (
       validateEmail(userInputs.email.value) &&
       validateName(userInputs.name.value) &&
       originValue(userInputs.origin.value) &&
-      destinyValue(userInputs.destiny.value)
+      destinyValue(userInputs.destiny.value) &&
+      compareDates(departureDate.value, returnDate.value)
     ) {
       confirmModal()
     }

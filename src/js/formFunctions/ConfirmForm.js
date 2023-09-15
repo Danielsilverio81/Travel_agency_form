@@ -1,14 +1,10 @@
-import {
-  modal,
-  modalContainer,
-  response,
-  userInputs,
-} from "./getElements.js";
+import { modal, modalContainer, response, userInputs } from "./getElements.js";
 import { resetFormStyles } from "./resetForm.js";
 
 
+
 export const confirmModal = () => {
-    modalContainer.classList.add("open");
+   modalContainer.classList.add("open")
     modal.addEventListener("click", (e) => {
         if(e.target.id === 'btnConfirm') {
             confirmAndReset()
@@ -24,10 +20,10 @@ export const confirmModal = () => {
 };
 
 function confirmAndReset() {
-  response.classList.add("confirm");
+  response.classList.add("confirm")
   resetFormStyles(userInputs);
 }
 
 function closeModal() {
-  modalContainer.classList.remove('open')
+  modalContainer.classList.remove("open")
 }

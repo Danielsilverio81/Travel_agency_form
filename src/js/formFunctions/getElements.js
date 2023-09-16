@@ -2,7 +2,7 @@ export const userInputs = {
     name: document.getElementById('name'),
     email: document.getElementById('email'),
     origin: document.getElementById('origin'),
-    destiny: document.getElementById('destiny')
+    destiny: document.getElementById('destiny'),
 }
 
 export const form = document.querySelector('form')
